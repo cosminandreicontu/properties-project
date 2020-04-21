@@ -14,7 +14,7 @@ import Add from './components/Add';
 import queryString from "query-string";
 
 
-
+// get decoded data from token if exists in local storage
 if (localStorage.jwtToken) {
   const token = localStorage.jwtToken;
   setAuthToken(token);
@@ -39,7 +39,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-
+    // add token from google login to local storage and get decoded info
     if (this.props.location){
     const query = queryString.parse(this.props.location.search);
     if (query.token) {
@@ -55,7 +55,7 @@ class App extends React.Component {
       this.props.history.push("/");
    }
   }
-
+    // get properties from backend
     fetch("/properties/all")
     .then(res => res.json())
     .then(res => this.setState({propertiesList: res})
@@ -78,6 +78,7 @@ class App extends React.Component {
   }
 }
 
+// some default dummy data
 const properties = [
   {
 

@@ -12,6 +12,7 @@ class PropertyModal extends React.Component {
     render(){
       const images = this.props.images ? this.props.images.map((item, i) => ({original: item, thumbnail: item})) : []
     return (
+      // This version of Modal component logs some warnings when displayed but doesn't affect functionality.
       <Modal
         {...this.props}
         size="xl"
@@ -26,21 +27,21 @@ class PropertyModal extends React.Component {
         </Modal.Header>
         <Modal.Body>
             <div>
-          <h4 style={{color: "red", fontWeight: "bold", marginRight: "10%"}}>{`Price: ${this.props.sold_price} ${this.props.currency}`}</h4>
-          <div>
-            <span><Building/>{` ${this.props.type} `}</span><br/>
-            <span><GeoAlt/> {this.props.location != null ? this.props.location.city:null}</span>
-            </div>
+              <h4 style={{color: "red", fontWeight: "bold", marginRight: "10%"}}>{`Price: ${this.props.sold_price} ${this.props.currency}`}</h4>
+              <div>
+                <span><Building/>{` ${this.props.type} `}</span><br/>
+                <span><GeoAlt/> {this.props.location != null ? this.props.location.city:null}</span>
+                </div>
             </div>
             <div>
-            <ImageGallery items={images} />
+              <ImageGallery items={images} />
             </div>
             <h4>Description</h4>
             <p>
-            {this.props.description}
-          </p>
-          <h4>Location</h4>
-          {this.props.location && <SimpleMap data={[{lat: this.props.location.coordinates[1], lng: this.props.location.coordinates[0]}]} center={{lat: this.props.location.coordinates[1], lng: this.props.location.coordinates[0]}} name={this.props.name} size={"map-small"}/>}
+              {this.props.description}
+            </p>
+            <h4>Location</h4>
+            {this.props.location && <SimpleMap data={[{lat: this.props.location.coordinates[1], lng: this.props.location.coordinates[0]}]} center={{lat: this.props.location.coordinates[1], lng: this.props.location.coordinates[0]}} name={this.props.name} size={"map-small"}/>}
         </Modal.Body>
         <Modal.Footer>
           <Button onClick={this.props.onHide}>Close</Button>

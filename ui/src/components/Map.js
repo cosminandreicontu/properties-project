@@ -32,6 +32,7 @@ class SimpleMap extends Component {
     return (
       
       <div className={this.props.size}>
+        {/* Didn't added an API key so the functionality of GMap is limited */} 
         <GoogleMapReact
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
@@ -47,6 +48,7 @@ class SimpleMap extends Component {
 
 }
 
+// overwritten GMap method to fix a bug
 const distanceToMouse = (pt, mousePos, markerProps) => {
 
   // pt can be undefined in some cases
