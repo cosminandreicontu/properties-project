@@ -8,3 +8,4 @@ Steps:
 3. docker build -t webapp-ui:latest ui/
 4. docker build -t webapp-server:latest server/
 5. docker-compose up
+6. Access the web app at http://localhost:3000
