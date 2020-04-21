@@ -1,0 +1,118 @@
+body {
+  background: #fcfcfc;
+}
+
+.row {
+  justify-content: space-evenly;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+}
+
+.property {
+  padding: 10px 4px;
+}
+
+.modal-90w {
+  max-width: 90%;
+}
+
+.container-xl {
+  background: #f8f8f8;
+  box-shadow: 0 5px 3px grey;
+}
+
+.container-xl h3 {
+  text-align: center;
+}
+
+
+form h3 {
+  text-align: center;
+}
+
+.image-gallery-content .image-gallery-slide .image-gallery-image {
+  max-height: none !important;
+}
+
+.navbar-nav .btn {
+  margin: 0 5px;
+}
+
+form .btn {
+  width: 100%;
+}
+
+.title {
+  text-align: center;
+  padding: 5%;
+}
+
+.title h5 {
+  color: #999;
+}
+
+.rounded-circle {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+}
+
+.map-small {
+  height: 40vh;
+  width: 100%;
+}
+
+.map-large {
+  height: 95vh;
+  width: 100%;
+  margin: 0 auto;
+}
+
+hr {
+  margin: 3rem;
+}
+form {
+  width: 30%;
+  margin: 20vh auto 0 auto;
+}
+
+.dropdown-item {
+  padding: .25rem 1rem;
+}
+
+.dropdown-menu {
+  min-width: fit-content;
+}
+
+form .add-btn {
+  font-size: 0.7rem;
+  width: 50px;
+  height: 25px;
+}
+
+form .add-btn-div {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.add-form {
+  margin: 10vh auto;
+}
+
+.add-link span {
+  color: white;
+  font-weight: bold;
+}
+.add-link span:hover {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.avatar-item {
+  flex-direction: row;
+}
